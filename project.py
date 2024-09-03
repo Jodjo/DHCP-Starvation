@@ -33,7 +33,7 @@ def main():
 
     self_mac = get_if_hwaddr(IFACE)
     self_ip = get_if_addr(IFACE)
-    for i in range(1000):
+    while True:
         # Sending a request to get an IP address for our MAC address
         dhcp_discover_request = (
             Ether(src=RandMac(), dst="ff:ff:ff:ff:ff:ff")
